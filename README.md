@@ -71,4 +71,12 @@ project settings reside in main module.
 URL for splitwise are in splitwise module.  
 DB schema is defined in splitwise.models module in class based format.  
 Serializer classes are being used to validate request data, serialize and deserialize data.  
-  
+
+ENV KEYS:  
+DB_NAME  
+DB_USER  
+DB_PASSWORD  
+DB_HOST  
+DB_PORT  
+EMAIL_HOST_PASSWORD  
+EMAIL_HOST_USER  
