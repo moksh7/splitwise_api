@@ -25,7 +25,6 @@ def get_balance_data():
             '''
         cursor.execute(q)
         debt_list = cursor.fetchall()
-        print(lent_list, debt_list)
     return lent_list, debt_list
 
 def compile_balance_data(lent_list, debt_list):
@@ -49,5 +48,4 @@ class UserBalances(APIView):
     
     def get(self, request):   
         balance = compile_balance_data(*get_balance_data())
-        print(balance)
         return Response(get_resp(balance))
