@@ -22,7 +22,6 @@ def send_html_mail(subject, body, debtor_id, lender_id=None):
         lender = SplitUser.objects.filter(id=lender_id).first()
         lender = lender.name if lender else None
         debtor = SplitUser.objects.filter(id=debtor_id).first()
-        debtor = debtor.email if debtor else None
+        debtor = debtor.name if debtor else None
         body = body % lender
-    print(body)
-    # EmailThread(subject, body, recipient_list).start()
+    EmailThread(subject, body, [debtor.email]).start()
