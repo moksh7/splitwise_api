@@ -17,7 +17,7 @@ class AddTransactionView(GenericAPIView):
         transaction_handler = handlers.get(serializer.validated_data.get('type'))
         with transaction.atomic():
             transaction_handler(serializer.validated_data)
-        return Response({'data': 'Successsss'})
+        return Response({'data': 'Transaction Recorded.'})
 
 
 class TranasctionHandler:
