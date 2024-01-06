@@ -21,16 +21,16 @@ Also after transaction has been recorded a mail to the debtor is sent asynchrono
 
 endpoint: /add_transaction
 method: post
-request_body: {
-    "payer": 3,     [//]: ID of user who lends
-    "type": "3",    [//]: Type of transaction ('1', 'EQUAL'), ('2', 'EXACT'), ('3', 'PERCENT')
-    "amount": 3000,
-    "share": {      [//]: Share of each user according to transaction_type where keys are USER IDs and values are transactional info:
-        "1":40,     [//]: EQUAL: values can be 0 
-        "2": 30,    [//]: EXACT: exact vshare of a user in that transaction.
-        "3": 0,     [//]: PERCENT: percentage share of each user
+request_body: {  
+    "payer": 3,     `# ID of user who lends`  
+    "type": "3",    `# Type of transaction ('1', 'EQUAL'), ('2', 'EXACT'), ('3', 'PERCENT')`  
+    "amount": 3000,  
+    "share": {      `# Share of each user according to transaction_type where keys are USER IDs and values are transactional info:`  
+        "1":40,         `# EQUAL: values can be 0`  
+        "2": 30,        `# EXACT: exact vshare of a user in that transaction`  
+        "3": 0,         `# PERCENT: percentage share of each user`  
         "4": 30
-    }
+    }  
 }
 
 
