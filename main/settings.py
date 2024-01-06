@@ -143,38 +143,38 @@ EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 
 
 
-# LOG_LEVEL = 'DEBUG' if DEBUG else 'INFO'
+LOG_LEVEL = 'DEBUG' if DEBUG else 'INFO'
 
-# DJANGO_HANDLERS =  {
-#     'console': {
-#         'level': LOG_LEVEL,
-#         'class': 'logging.StreamHandler',
-#         'formatter': 'verbose',
-#     },
-# }
+DJANGO_HANDLERS =  {
+    'console': {
+        'level': LOG_LEVEL,
+        'class': 'logging.StreamHandler',
+        'formatter': 'verbose',
+    },
+}
 
-# DJANGO_LOG_HANDLER = ['console']
+DJANGO_LOG_HANDLER = ['console']
 
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'verbose': {
-#             'format': '{levelname} {asctime} {message}',
-#             'style': '{',
-#         },
-#     },
-#     'handlers': DJANGO_HANDLERS, 
-#     'root': {
-#         'handlers': DJANGO_LOG_HANDLER,
-#         'level': LOG_LEVEL,
-#     },
-#     'loggers': {
-#         'django.db.backends': {
-#             'handlers': DJANGO_LOG_HANDLER,
-#             'level': LOG_LEVEL,
-#             'propagate': False,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': DJANGO_HANDLERS, 
+    'root': {
+        'handlers': DJANGO_LOG_HANDLER,
+        'level': LOG_LEVEL,
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': DJANGO_LOG_HANDLER,
+            'level': LOG_LEVEL,
+            'propagate': False,
+        },
+    },
+}

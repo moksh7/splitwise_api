@@ -29,4 +29,3 @@ class TransactionSerializer(serializers.Serializer):
         elif data['type'] == '3':
             percent_validation(data['share'])
         return data
-# {i:round(j, 2) for i,j in d.items()} 
